@@ -31,11 +31,36 @@ document.addEventListener("keydown", (event) =>{
             position.x += 10;
             break;
     }
-
+     //transform the position 
     toady.style.transform= `translate(
         ${position.x}px,
         ${position.y}px
     )`
 
-
 });
+
+const obstacles= []
+const creatObstacle = () => {
+
+const obstacle= document.createElement("div")
+obstacle.classList.add( "obstacle")
+obstacle.classList.add("car")
+
+obstacles.push(obstacle)
+document.body.appendChild(obstacle)
+}
+
+creatObstacle()
+
+setInterval(() =>{
+
+//check if toady is inside a car now
+
+for (const obstacle of obstacles){
+//give w h of each of the corner of the box
+const box = obstacle.getBoundingClientRect()
+if(box.top < position.y){
+
+}
+}
+},30)

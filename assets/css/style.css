@@ -10,3 +10,23 @@ body{
     background: lime;
     transition: .3s;
 }
+
+.car{
+width: 6rem;
+height: 2rem;
+background: black;
+/*spead of the car*/
+animation: drive 4s infinite;
+/* make the speed linear*/
+}
+
+/* move the car viw port width is vwx*/
+@keyframes drive {
+100% {
+    transform: translateX(100vw);
+}
+}
+
+
+
+
